@@ -52,13 +52,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="/home">Zaczytana Luna</a>
     <div class="ml-auto navbar-nav">
-        {% if user.is_authenticated %}
-            <p class="navbar-text mr-3">Witaj, {{ user.username }}!</p>
-            <a href="{% url 'logout' %}" class="btn btn-secondary ml-2">Wyloguj</a>
-        {% else %}
-            <a href="/registration_form/" class="btn btn-primary ml-2">Rejestracja</a>
-            <a href="/login/" class="btn btn-secondary ml-2">Zaloguj się</a>
-        {% endif %}
+        <a href="/registration_form/" class="btn btn-primary ml-2">Rejestracja</a>
+        <a href="/login/" class="btn btn-secondary ml-2">Zaloguj się</a>
     </div>
 </nav>
 <div class="section-buttons">
@@ -73,5 +68,6 @@
         <img src="https://i.pinimg.com/564x/a1/83/c6/a183c61a4363b52e249227691cf2ca80.jpg" alt="logo">
     </div>
 {% endblock content %}
+
 </body>
 </html>

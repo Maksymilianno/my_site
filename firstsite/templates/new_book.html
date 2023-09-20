@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Dodaj nową książkę</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Dodaj książkę</button>
+    </form>
+    {% if message %}
+    <div class="alert alert-success mt-3">
+        {{ message }}
+    </div>
+    {% endif %}
+</div>
+{% endblock content %}
